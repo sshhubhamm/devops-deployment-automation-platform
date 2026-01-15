@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Install Dependencies') {
             steps {
-                bat 'python -m pip install -r app/requirements.txt'
+                bat '"C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python315\\python.exe" -m pip install -r app/requirements.txt'
             }
         }
 
         stage('Test Application') {
             steps {
-                bat 'python -c "print(\'CI pipeline executed successfully\')"'
+                bat '"C:\\Users\\dell\\AppData\\Local\\Programs\\Python\\Python315\\python.exe" -c "print(\'CI pipeline executed successfully\')"'
             }
         }
     }
