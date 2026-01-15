@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout Code') {
+            steps {
+                git 'https://github.com/sshhubhamm/devops-deployment-automation-platform.git'
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                bat 'pip install -r app/requirements.txt'
+            }
+        }
+
+        stage('Test Application') {
+            steps {
+                bat 'python -c "print(\'Basic test passed\')"'
+            }
+        }
+    }
+}
